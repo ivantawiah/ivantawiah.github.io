@@ -8,19 +8,33 @@
     <title>Ivan Siisi Tawiah's | Portfolio</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + JohnDoe main styles -->
-	<link rel="stylesheet" href="assets/css/johndoe.css">
+    <!-- Bootstrap + main styles -->
+	<link rel="stylesheet" href="assets/css/siisi.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
     <header class="header">
         <div class="container">
             <ul class="social-icons pt-3">
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.x.com/@siisi_tv"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/siisi_tv"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="https://www.linkedIn.com/in/ivan-siisi-tawiah"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.x.com/@siisi_tv" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" id="copyButton"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
+                <script>
+                  
+                    function copyURLToClipboard() {
+                      var currentURL = window.location.href;
+                  
+                      var tempTextArea = document.createElement('textarea');
+                      tempTextArea.value = currentURL;
+                      document.body.appendChild(tempTextArea);
+                      tempTextArea.select();
+                      document.execCommand('copy');
+                      document.body.removeChild(tempTextArea);
+                      alert('URL copied to clipboard: ' + currentURL);
+                    }
+                    document.getElementById('copyButton').addEventListener('click', copyURLToClipboard);
+                  </script>
             </ul>  
             <div class="header-content">
                 <h4 class="header-subtitle" >Hello, I am</h4>
@@ -91,7 +105,23 @@
                 <span class="line mb-5"></span>
                 <h5 class="mb-3">A Software Developer located In The Wonderlands of Africa Ghana</h5>
                 <p class="mt-20">An enthusiastic and a highly amiable person in the field of Science, Technology and Engineering with a technical background in Robotics and ethical problem solving. Am also aspiring to be part of a team where my skills and knowledgeable abilities would help me be a great contributor to the company’s effort </p>
-                <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+                <button id="downloadCV" class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+                <script>
+                    document.getElementById('downloadCV').addEventListener('click', function() {
+                        //Specifying document URL
+                        var documentURL = 'assets/CV.pdf';
+                        var fileName = 'ivan-siisi-tawiah-CV.pdf';
+                        //Creating an invisible element that would trigger the download
+                        var a = document.createElement('a');
+                        a.href = documentURL;
+                        a.download = fileName;
+                        //Trigger a click event
+                        a.style.display = 'none';
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    });
+                </script>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
@@ -104,11 +134,26 @@
                     <li><span>Address</span> : 4th Link street - Spintex, Accra</li>
                 </ul>
                 <ul class="social-icons pt-3">
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                    <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                   
+                    <li class="social-item"><a class="social-link" href="https://www.x.com/@siisi_tv" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a id="copyButton1" class="social-link" href="#" target="_blank"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
+                    <script>
+                  
+                        function copyURLToClipboard() {
+                          var currentURL = window.location.href;
+                      
+                          var tempTextArea = document.createElement('textarea');
+                          tempTextArea.value = currentURL;
+                          document.body.appendChild(tempTextArea);
+                          tempTextArea.select();
+                          document.execCommand('copy');
+                          document.body.removeChild(tempTextArea);
+                          alert('URL copied to clipboard: ' + currentURL);
+                        }
+                        document.getElementById('copyButton1').addEventListener('click', copyURLToClipboard);
+                      </script>
                 </ul>  
             </div>
             <div class="col-lg-4 about-card">
@@ -400,16 +445,16 @@
                             <li class="list-item">No <span class="text-muted"><s>In-person Class Sessions</s></span></li><br>
                         </ul>
                         <button id="freePackage" class="btn btn-primary btn-rounded w-lg">Enquire</button>
-                        <script>
-                            document.getElementById('freePackage').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Free Tutorial Package Enquiry";
-                                var body = "I'd Like to enquire about the free package please ";
+                            <script>
+                                document.getElementById('freePackage').addEventListener('click', function() {
+                                    var email = "tawiahivansiisi@gmail.com";
+                                    var subject = "Free Tutorial Package Enquiry";
+                                    var body = "I'd Like to enquire about the free package please ";
                             
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+                                    var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
                             
                                 window.location.href = mailtoLink;
-                            });
+                                });
                             </script>
                             
                     </div>
@@ -508,7 +553,20 @@
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <button class="btn bg-primary w-lg" >Hire me</button>
+            <button id="openURLHIRE" class="btn bg-primary w-lg" >Hire me</button>
+            <script>
+                // Function to open the URL in a new tab
+                function openURL() {
+                  
+                  var urlToOpen = 'https://www.freelancer.com/u/tawiahivansiisi';
+              
+                  // Open the URL in a new tab
+                  window.open(urlToOpen, '_blank');
+                }
+              
+                // Attach the function to the button click event
+                document.getElementById('openURLHIRE').addEventListener('click', openURL);
+              </script>
         </div>
     </section>
 
@@ -768,16 +826,38 @@
                         <h4 class="contact-title">Send a message</h4>
                         <form action="">
                             <div class="form-group">
-                                <input  class="form-control" type="text" placeholder="Name *" required>
+                                <input id="name" class="form-control" type="text" placeholder="Name *" required>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required>
+                                <input id="subject" class="form-control" type="email" placeholder="Subject *" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
+                                <textarea id="message" class="form-control" id=" placeholder="Message *: Would you like to enquire about something, my Merch, Service or whatever it is that concerns you" rows="7" required></textarea>
                             </div>
                             <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                                <button id="sendMessage" type="submit" class="form-control btn btn-primary" onclick="composeEmail()" >Send Message</button>
+                                <script>
+                                  
+                                    function composeEmail() {
+                                  
+                                      var subject = document.getElementById('subject').value;
+                                      var name = document.getElementById('name').value;
+                                      var message = document.getElementById('message').value;
+                                  
+                                     
+                                      var emailBody = "Subject: " + subject + "\n\n";
+                                      emailBody += "Name: " + name + "\n\n";
+                                      emailBody += "Message:\n" + message;
+                                  
+                                     
+                                      var mailtoLink = "mailto:tawiahivansiisi@gmail.com" +
+                                                       "?subject= " + encodeURIComponent(subject) +
+                                                       "&body=" + encodeURIComponent(emailBody);
+                                  
+                                      
+                                      window.location.href = mailtoLink;
+                                    }
+                                  </script>
                             </div>
                         </form>
                     </div>
@@ -810,11 +890,26 @@
                             </div>
                         </div>
                         <ul class="social-icons pt-4">
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
-                            <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+                           
+                            <li class="social-item"><a class="social-link text-dark" href="https://www.x.com/@siisi_tv" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="social-item"><a class="social-link text-dark" id="copyButton2" target="_blank"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
+                            <script>
+                  
+                                function copyURLToClipboard() {
+                                  var currentURL = window.location.href;
+                              
+                                  var tempTextArea = document.createElement('textarea');
+                                  tempTextArea.value = currentURL;
+                                  document.body.appendChild(tempTextArea);
+                                  tempTextArea.select();
+                                  document.execCommand('copy');
+                                  document.body.removeChild(tempTextArea);
+                                  alert('URL copied to clipboard: ' + currentURL);
+                                }
+                                document.getElementById('copyButton2').addEventListener('click', copyURLToClipboard);
+                              </script>
                         </ul> 
                     </div>
                 </div>
@@ -825,7 +920,7 @@
     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Ivan</span></a> 
+                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Ivan</span></a> 
             </p>
         </div>
     </footer>
@@ -843,8 +938,8 @@
     <!-- Google mpas -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
 
-    <!-- JohnDoe js -->
-    <script src="assets/js/johndoe.js"></script>
+    <!-- Siisi js -->
+    <script src="assets/js/siisi.js"></script>
 
 </body>
 </html>
