@@ -552,6 +552,64 @@
             </div>
         </div>
     </section>
+	<section id="congrats" class="hidden" style="height: 700px;">
+        <h1 class="testhead">Congratulations! Your Payment was Successful</h1>
+        <p>Thank you for your purchase. Your package will be sent to your email shortly. Please be patient.</p>
+        <button class="testbtn" id="homeButton">Back to Home</button>
+    </section>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+    // Get the hash from the URL
+    var hash = window.location.hash.substr(1);
+
+    // If the hash is "congrats", remove the hidden class from the "congrats" section
+    if (hash === "congrats") {
+      var congratsSection = document.getElementById("congrats");
+      if (congratsSection) {
+        congratsSection.classList.remove("hidden");
+      }
+    }
+  });
+
+        document.getElementById('homeButton').addEventListener('click', function() {
+    window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
+  });
+    </script>
+
+<style>
+.hidden {
+  display: none;
+}
+
+ #congrats {
+font-family: Arial, sans-serif;
+background-color: #fff;
+margin-top: 200px;
+padding: 0;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 100vh;
+}
+
+
+.testhead {
+color: #be7d1c;
+}
+
+.testbtn {
+background-color: #be7d1c;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.testbtn:hover {
+background-color: #fcc676;
+}
+</style>
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
