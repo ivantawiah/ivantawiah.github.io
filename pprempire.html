@@ -13,12 +13,12 @@
             <p class="quote">"Today's sacrifices are investments in tomorrow's dreams."</p>
         </div>
         <h1>Payment Info.</h1>
-        <form action="#" method="post">
+        <form id="paymentForm" method="post">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email-address" name="email" required>
 
             <label for="card-number">Fullname:</label>
-            <input type="text" id="card-number" name="card-number" required>
+            <input type="text" id="card-name" name="card-number" required>
 
             <label for="expiry-date">Package:</label>
             <select id="paymentPlanSelect" required>
@@ -31,8 +31,39 @@
             <label for="cvv">Comment</label>
             <input type="text" id="cvv" name="cvv" placeholder="Optional">
 
-            <button id="planButton" type="submit">Pay Now</button>
+            <button id="planButton" type="submit" onclick="payWithPaystack()">Pay Now</button>
         </form>
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+        <script>
+            const paymentForm = document.getElementById('paymentForm');
+            const selectElement = document.getElementById('paymentPlanSelect');
+
+           
+
+paymentForm.addEventListener("submit", payWithPaystack, false);
+
+function payWithPaystack(e) {
+  e.preventDefault();
+
+  let handler = PaystackPop.setup({
+    key: 'pk_test_7a80cc4f933b7c82afc38682b92f2ae2806dbf2f', // Replace with your public key
+    email: document.getElementById("email-address").value,
+    amount: document.getElementById("paymentPlanSelect").value * 100,
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+    currency: 'GHS', // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+    // label: "Optional string that replaces customer email"
+    onClose: function(){
+      alert('Window closed.');
+    },
+    callback: function(response){
+      let message = 'Payment complete! Reference: ' + response.reference;
+      alert(message);
+    }
+  });
+
+  handler.openIframe();
+}
+        </script>
         <h5> 2% of your purchase would be donated to help small startups in Ghana, Together let's put Ghana on the map.</h5>
     </div>
     <script>       
@@ -63,6 +94,11 @@
                     console.log('You have selected the ' + planDetails[selectedValue] + '.');
                 }
             });
+
+
+    
+
+
         });
     </script>
     <style>
