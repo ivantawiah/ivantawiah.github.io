@@ -12,21 +12,59 @@
             <img src="PPR img.jpg" alt="Profile Picture" class="profile-picture">
             <p class="quote">"Today's sacrifices are investments in tomorrow's dreams."</p>
         </div>
-        <h1>You are purchasing a LinkedIn Strategy 1:1 booking session.</h1>
+        <h1>Payment Info.</h1>
         <form action="#" method="post">
-            <label for="card-number">Card Number:</label>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="card-number">Fullname:</label>
             <input type="text" id="card-number" name="card-number" required>
 
-            <label for="expiry-date">Expiry Date:</label>
-            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+            <label for="expiry-date">Package:</label>
+            <select id="paymentPlanSelect" required>
+                <option selected value="0">--Select a Plan--</option>
+                <option value="40">Starter GHS39.99</option>
+                <option value="80">Basic GHS79.99</option>
+                <option value="250">Pro GHS249.99</option>
+            </select>
 
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
+            <label for="cvv">Comment</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Optional">
 
-            <button type="submit">Pay Now</button>
+            <button id="planButton" type="submit">Pay Now</button>
         </form>
-        <h5>Fee of $10</h5>
+        <h5> 2% of your purchase would be donated to charity</h5>
     </div>
+    <script>       
+    document.addEventListener('DOMContentLoaded', (event) => {
+            const selectElement = document.getElementById('paymentPlanSelect');
+            const planButton = document.getElementById('planButton');
+
+            const planDetails = {
+                '40': 'Starter GHS39.99',
+                '80': 'Basic GHS79.99',
+                '250': 'Pro GHS249.99'
+            };
+
+            selectElement.addEventListener('change', function() {
+                const selectedValue = this.value;
+                if (selectedValue && planDetails[selectedValue]) {
+                    planButton.textContent = 'Pay GHS' + selectedValue + ' now';
+                } else {
+                    planButton.textContent = 'Select a Plan';
+                }
+            });
+
+            planButton.addEventListener('click', function() {
+                const selectedValue = selectElement.value;
+                if (selectedValue == '0') {
+                    alert('Please select a payment plan.');
+                } else if (selectedValue && planDetails[selectedValue]) {
+                    console.log('You have selected the ' + planDetails[selectedValue] + '.');
+                }
+            });
+        });
+    </script>
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -37,7 +75,7 @@
 
 .container {
     width: 70%;
-    margin: 50px auto 0 auto;
+    margin:  20px auto 0px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -82,7 +120,16 @@ label {
     color: #555;
 }
 
-input[type="text"] {
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
