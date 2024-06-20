@@ -881,27 +881,206 @@ background-color: #fcc676;
                         <img src="assets/imgs/blog3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                     </div>
                     <div class="content-holder">
-                        <h4 class="title">AI-Powered Personal Finance Assistant (Martha)</h4>
+                        <h4 class="title">AI-Powered Personal Finance Assistant (Marthal)</h4>
 
                         <p class="post-details">
                             <a href="#">Number of pledged Supporters:</a>
                             <a href="#"><i class="ti-hand-open text-danger"></i> 3</a>
                         </p>
                         <p><b>Project Description:</b></p>
-                        <p> This app would help provide users with a comprehensive tool for managing their finances. It goes beyond traditional budgeting apps by harnessing the power of artificial intelligence. The assistant helps users create personalized financial plans, tracks their expenses, and offers actionable recommendations for saving money and achieving their financial goals. It's like having a financial advisor at your fingertips, providing budgeting insights, investment suggestions, and long-term financial planning—all tailored to the user's unique financial situation. This project aims to empower individuals to take control of their finances and make informed decisions for a secure financial future./p>
+                        <p> This app would help provide users with a comprehensive tool for managing their finances. It goes beyond traditional budgeting apps by harnessing the power of artificial intelligence. The assistant helps users create personalized financial plans, tracks their expenses, and offers actionable recommendations for saving money and achieving their financial goals. It's like having a financial advisor at your fingertips, providing budgeting insights, investment suggestions, and long-term financial planning—all tailored to the user's unique financial situation. This project aims to empower individuals to take control of their finances and make informed decisions for a secure financial future.</p>
 
-                        <a id="supportProject3" href="#" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
-                        <script>
-                            document.getElementById('supportProject3').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Pledge to Support";
-                                var body = "I [Your name here] would like to know more about this project and support in a way I can";
+                        
+                        <a id="myBtnol3" href="#" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
+                       
+                       <!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+        <div class="modal-content">
+            <span class="closeol">×</span>
+            <h1 class="textol">Donate now.</h1>
+            <form class="formol" id="paymentForm" method="post">
+                <label class="labelol" for="email">Email:</label>
+                <input class="inputol" type="email" id="email-address" name="email" required>
+    
+                <label class="labelol" for="card-number">Fullname:</label>
+                <input class="inputol" type="text" id="card-name" name="card-number" required>
+    
+                <label class="labelol" for="cvv">Amount:</label>
+                <input class="inputol" type="number" id="cvv" name="cvv" placeholder="Mininum of GHS 5" min="5" step="1" required>
+    
+                <button class="buttonol" id="planButton" type="submit" onclick="payWithPaystack()">Donate</button>
+            </form>
+            <script>
+                // Get references to the input field and the button
+                const inputField = document.getElementById('cvv');
+                const dynamicButton = document.getElementById('planButton');
+            
+                // Add an event listener to the input field to listen for input events
+                inputField.addEventListener('input', function() {
+                    // Change the button text to the value of the input field
+                    dynamicButton.textContent = 'Donate GHS ' + inputField.value + ' now';
+                });
+            </script>
+            
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+            <script>
+                const paymentForm = document.getElementById('paymentForm');
+                const selectElement = document.getElementById('paymentPlanSelect');
+    
+               
+    
+    paymentForm.addEventListener("submit", payWithPaystack, false);
+    
+    function payWithPaystack(e) {
+      e.preventDefault();
+    
+      let handler = PaystackPop.setup({
+        key: 'pk_live_78f4689f62138e0e4ca10676ad3e05a7df40617f', // Replace with your public key
+        email: document.getElementById("email-address").value,
+        amount: document.getElementById("cvv").value * 100,
+        ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+        currency: 'GHS', // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+        // label: "Optional string that replaces customer email"
+        onClose: function(){
+          alert('Window closed.');
+        },
+        callback: function(response){
+          let message = 'Payment complete! Reference: ' + response.reference;
+          alert(message);
+        }
+      });
+    
+      handler.openIframe();
+    }
+            </script>
+        
+        </div>
+    
+    </div>
+
+<style>
+    /* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 45px auto;
+    border: 1px solid #888;
+    width: 70%;
+    padding: 15px 20px 5px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* The Close Button */
+.closeol {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closeol:hover,
+.closeol:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.textol {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+}
+
+.formol {
+    margin-top: 20px;
+}
+
+.labelol {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.inputol {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.selectol {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buttonol {
+    background-color: #b77b0c;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 60px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buttonol:hover {
+    background-color: #000000;
+    color: #be7d1c;
+}
+</style>
+
+<script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtnol3");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closeol")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+    modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+</script>
+                       <script>
                             
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
+                       </script>
                     </div>
                 </div><!-- end of blog wrapper -->
 
