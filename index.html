@@ -831,18 +831,104 @@ background-color: #fcc676;
                         <p><b>Project Description:</b></p>
                         <p>One of my current projects is the development of an Aerospace Simulation App. This app is a unique blend of my skills as a student in aerospace engineering, a software developer, and a graphic designer. It's designed to provide users with immersive experiences related to aerospace scenarios. Imagine launching rockets into space, understanding orbital mechanics, and experiencing the thrill of spaceflight. It's not just about coding; it's about creating a visually engaging and interactive learning tool. By incorporating 3D graphics and animations, I'm making complex aerospace concepts more accessible and enjoyable for anyone interested in the field.</p>
 
-                        <a id="supportProject" href="#" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
-                        <script>
-                            document.getElementById('supportProject').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Pledge to Support";
-                                var body = "I [Your name here] would like to know more about this project and support in a way I can";
+                        <a id="myBtnol4" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
+                        
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="closeol4">×</span>
+                                <h1 class="textol">#supportProjectAeroSimApp</h1>
+                                <form class="formol" id="paymentForm" method="post">
+                                    <label class="labelol" for="email">Email:</label>
+                                    <input class="inputol" type="email" id="email-address4" name="email" required>
+                        
+                                    <label class="labelol" for="card-number">Fullname:</label>
+                                    <input class="inputol" type="text" id="card-name" name="card-number" required>
+                        
+                                    <label class="labelol" for="cvv">Amount:</label>
+                                    <input class="inputol" type="number" id="cvv4" name="cvv" placeholder="Mininum of GHS 5" min="5" step="1" required>
+                        
+                                    <button class="buttonol" id="planButton4" type="submit" onclick="payWithPaystack()">Donate</button>
+                                </form>
+                                <script>
+                                    // Get references to the input field and the button
+                                    const inputField4 = document.getElementById('cvv4');
+                                    const dynamicButton4 = document.getElementById('planButton4');
+                                
+                                    // Add an event listener to the input field to listen for input events
+                                    inputField4.addEventListener('input', function() {
+                                        // Change the button text to the value of the input field
+                                        dynamicButton4.textContent = 'Donate GHS ' + inputField4.value + ' now';
+                                    });
+                                </script>
+                                
+                                <script src="https://js.paystack.co/v1/inline.js"></script>
+                                <script>
+                                    const paymentForm4 = document.getElementById('paymentForm4');
+                                    const selectElement4 = document.getElementById('paymentPlanSelect4');
+                        
+                                   
+                        
+                        paymentForm.addEventListener("submit", payWithPaystack, false);
+                        
+                        function payWithPaystack(e) {
+                          e.preventDefault();
+                        
+                          let handler = PaystackPop.setup({
+                            key: 'pk_live_78f4689f62138e0e4ca10676ad3e05a7df40617f', // Replace with your public key
+                            email: document.getElementById("email-address4").value,
+                            amount: document.getElementById("cvv4").value * 100,
+                            ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+                            currency: 'GHS', // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                            // label: "Optional string that replaces customer email"
+                            onClose: function(){
+                              alert('Window closed.');
+                            },
+                            callback: function(response){
+                              let message = 'Payment complete! Reference: ' + response.reference;
+                              alert(message);
+                            }
+                          });
+                        
+                          handler.openIframe();
+                        }
+                                </script>
+    
+    <script>
+        // Get the modal
+    var modal4 = document.getElementById("myModal4");
+    
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("myBtnol4");
+    
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("closeol4")[0];
+    
+    // When the user clicks on the button, open the modal
+    btn4.onclick = function () {
+        modal4.style.display = "flex";
+    };
+    
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function () {
+        modal4.style.display = "none";
+    };
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal4) {
+            modal4.style.display = "none";
+        }
+    };
+    
+    </script>
+    
                             
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
+                            </div>
+                        
+                        </div>
+                        
+
+
                     </div>
                 </div><!-- end of blog wrapper -->
 
@@ -861,18 +947,104 @@ background-color: #fcc676;
                         <p><b>Project Description:</b></p>
                         <p>This tool will help engineers with the design and modeling of complex mechanical and structural systems. It's not just about calculations; it's about visually understanding how things work. Users can input parameters, and the tool will generate 3D visualizations and simulations into reality, making it easier to comprehend the behavior of their designs. As a student engineer, a software developer, and a graphic designer, I'm combining my skills to also create a user-friendly, informative, and visually engaging tool that engineers will find incredibly useful.</p>
 
-                        <a id="supportProject2" href="#" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
-                        <script>
-                            document.getElementById('supportProject2').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Pledge to Support";
-                                var body = "I [Your name here] would like to know more about this project and support in a way I can";
+                        <a id="myBtnol2" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="closeol2">×</span>
+                                <h1 class="textol">#supportProjectAREngineer</h1>
+                                <form class="formol" id="paymentForm" method="post">
+                                    <label class="labelol" for="email">Email:</label>
+                                    <input class="inputol" type="email" id="email-address2" name="email" required>
+                        
+                                    <label class="labelol" for="card-number">Fullname:</label>
+                                    <input class="inputol" type="text" id="card-name" name="card-number" required>
+                        
+                                    <label class="labelol" for="cvv">Amount:</label>
+                                    <input class="inputol" type="number" id="cvv2" name="cvv" placeholder="Mininum of GHS 5" min="5" step="1" required>
+                        
+                                    <button class="buttonol" id="planButton2" type="submit" onclick="payWithPaystack()">Donate</button>
+                                </form>
+                                <script>
+                                    // Get references to the input field and the button
+                                    const inputField2 = document.getElementById('cvv2');
+                                    const dynamicButton2 = document.getElementById('planButton2');
+                                
+                                    // Add an event listener to the input field to listen for input events
+                                    inputField2.addEventListener('input', function() {
+                                        // Change the button text to the value of the input field
+                                        dynamicButton2.textContent = 'Donate GHS ' + inputField2.value + ' now';
+                                    });
+                                </script>
+                                
+                                <script src="https://js.paystack.co/v1/inline.js"></script>
+                                <script>
+                                    const paymentForm2 = document.getElementById('paymentForm2');
+                                    const selectElement2 = document.getElementById('paymentPlanSelect2');
+                        
+                                   
+                        
+                        paymentForm.addEventListener("submit", payWithPaystack, false);
+                        
+                        function payWithPaystack(e) {
+                          e.preventDefault();
+                        
+                          let handler = PaystackPop.setup({
+                            key: 'pk_live_78f4689f62138e0e4ca10676ad3e05a7df40617f', // Replace with your public key
+                            email: document.getElementById("email-address2").value,
+                            amount: document.getElementById("cvv2").value * 100,
+                            ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+                            currency: 'GHS', // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                            // label: "Optional string that replaces customer email"
+                            onClose: function(){
+                              alert('Window closed.');
+                            },
+                            callback: function(response){
+                              let message = 'Payment complete! Reference: ' + response.reference;
+                              alert(message);
+                            }
+                          });
+                        
+                          handler.openIframe();
+                        }
+                                </script>
+    
+    <script>
+        // Get the modal
+    var modal2 = document.getElementById("myModal2");
+    
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtnol2");
+    
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("closeol2")[0];
+    
+    // When the user clicks on the button, open the modal
+    btn2.onclick = function () {
+        modal2.style.display = "flex";
+    };
+    
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function () {
+        modal2.style.display = "none";
+    };
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    };
+    
+    </script>
+    
                             
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                
                     </div>
                 </div><!-- end of blog wrapper -->
                 <!-- blog-card -->
@@ -898,7 +1070,7 @@ background-color: #fcc676;
     <!-- Modal content -->
         <div class="modal-content">
             <span class="closeol">×</span>
-            <h1 class="textol">Donate now.</h1>
+            <h1 class="textol">#supportProjectMartha</h1>
             <form class="formol" id="paymentForm" method="post">
                 <label class="labelol" for="email">Email:</label>
                 <input class="inputol" type="email" id="email-address" name="email" required>
@@ -987,14 +1159,18 @@ background-color: #fcc676;
 }
 
 /* The Close Button */
-.closeol {
+.closeol, .closeol2, .closeol4 {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .closeol:hover,
-.closeol:focus {
+.closeol:focus, 
+.closeol2:hover,
+.closeol2:focus,
+.closeol4:hover,
+.closeol4:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -1013,10 +1189,37 @@ background-color: #fcc676;
     cursor: pointer;
 }
 
+#myBtnol2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #be7d1c;
+}
+
+#myBtnol2:hover,
+#myBtnol2:focus {
+    color: rgb(112, 65, 14);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtnol4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #be7d1c;
+}
+
+#myBtnol4:hover,
+#myBtnol4:focus {
+    color: rgb(112, 65, 14);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .textol {
     text-align: center;
     color: #333;
     font-size: 20px;
+    font-weight: 600;
 }
 
 .formol {
@@ -1056,11 +1259,14 @@ background-color: #fcc676;
     border: none;
     border-radius: 16px;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .buttonol:hover {
     background-color: #000000;
     color: #be7d1c;
+    font-weight: 900;
+    font-size: 17px;
 }
 
 
