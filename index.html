@@ -891,7 +891,7 @@ background-color: #fcc676;
                         <p> This app would help provide users with a comprehensive tool for managing their finances. It goes beyond traditional budgeting apps by harnessing the power of artificial intelligence. The assistant helps users create personalized financial plans, tracks their expenses, and offers actionable recommendations for saving money and achieving their financial goals. It's like having a financial advisor at your fingertips, providing budgeting insights, investment suggestions, and long-term financial planning—all tailored to the user's unique financial situation. This project aims to empower individuals to take control of their finances and make informed decisions for a secure financial future.</p>
 
                         
-                        <a id="myBtnol3" href="#" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
+                        <a id="myBtnol3" class="read-more">Support this project <i class="ti-angle-double-right"></i></a>
                        
                        <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -964,7 +964,7 @@ background-color: #fcc676;
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%;
@@ -976,10 +976,12 @@ background-color: #fcc676;
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 45px auto;
+    margin: 95px auto 50px;
     border: 1px solid #888;
     width: 70%;
-    padding: 15px 20px 5px 20px;
+    z-index: 6;
+    height: 75%;
+    padding: 0 20px 0 20px;
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -994,6 +996,19 @@ background-color: #fcc676;
 .closeol:hover,
 .closeol:focus {
     color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtnol3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #be7d1c;
+}
+
+#myBtnol3:hover,
+#myBtnol3:focus {
+    color: rgb(112, 65, 14);
     text-decoration: none;
     cursor: pointer;
 }
@@ -1019,7 +1034,7 @@ background-color: #fcc676;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
@@ -1036,11 +1051,10 @@ background-color: #fcc676;
     background-color: #b77b0c;
     color: #fff;
     padding: 10px 20px;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     width: 100%;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 16px;
     font-size: 16px;
 }
 
@@ -1048,6 +1062,8 @@ background-color: #fcc676;
     background-color: #000000;
     color: #be7d1c;
 }
+
+
 </style>
 
 <script>
@@ -1062,7 +1078,7 @@ var span = document.getElementsByClassName("closeol")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
-    modal.style.display = "block";
+    modal.style.display = "flex";
 };
 
 // When the user clicks on <span> (x), close the modal
