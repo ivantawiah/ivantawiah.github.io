@@ -87,6 +87,40 @@ p {
   margin-bottom: 1rem;
 }
 
+.hidden {
+  display: none;
+}
+
+ #congrats {
+font-family: Arial, sans-serif;
+background-color: #fff;
+padding: 0;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 100vh;
+}
+
+
+.testhead {
+color: #be7d1c;
+}
+
+.testbtn {
+background-color: #be7d1c;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.testbtn:hover {
+background-color: #fcc676;
+}
+
+
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -110,6 +144,154 @@ dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 95px auto 50px;
+  border: 1px solid #888;
+  width: 70%;
+  z-index: 6;
+  height: 75%;
+  padding: 0 20px 0 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* The Close Button */
+.closeol, .closeol2, .closeol4 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeol:hover,
+.closeol:focus, 
+.closeol2:hover,
+.closeol2:focus,
+.closeol4:hover,
+.closeol4:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtnol3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #be7d1c;
+}
+
+#myBtnol3:hover,
+#myBtnol3:focus {
+  color: rgb(112, 65, 14);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtnol {
+  font-size: 15px;
+  font-weight: 600;
+  color: #be7d1c;
+}
+
+#myBtnol:hover,
+#myBtnol:focus {
+  color: rgb(112, 65, 14);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtnol2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #be7d1c;
+}
+
+#myBtnol2:hover,
+#myBtnol2:focus {
+  color: rgb(112, 65, 14);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.textol {
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.formol {
+  margin-top: 20px;
+}
+
+.labelol {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.inputol {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.selectol {
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.buttonol {
+  background-color: #b77b0c;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.buttonol:hover {
+  background-color: #000000;
+  color: #be7d1c;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.copyright {
+  text-align: center; 
+  margin: 0px auto 90px;
+  font-size: 12px;
+  color: #888;
+  width: 90%;
+  font-weight: 500;
+}
+
+
 
 ol ol,
 ul ul,
