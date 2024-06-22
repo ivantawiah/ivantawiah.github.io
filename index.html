@@ -22,43 +22,12 @@
                 <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
                 <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
                 <li class="social-item"><a class="social-link text-light" id="copyButton"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
-                <script>
-                  
-                    function copyURLToClipboard() {
-                      var currentURL = window.location.href;
-                  
-                      var tempTextArea = document.createElement('textarea');
-                      tempTextArea.value = currentURL;
-                      document.body.appendChild(tempTextArea);
-                      tempTextArea.select();
-                      document.execCommand('copy');
-                      document.body.removeChild(tempTextArea);
-                      alert('URL copied to clipboard: ' + currentURL);
-                    }
-                    document.getElementById('copyButton').addEventListener('click', copyURLToClipboard);
-                  </script>
             </ul>  
             <div class="header-content">
                 <h4 class="header-subtitle" >Hello, I am</h4>
                 <h1 class="header-title">Ivan Siisi Tawiah</h1>
                 <h6 class="header-mono" >Software Developer | Graphic Designer</h6>
                 <button id="downloadResume" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Download Resume</button>
-                <script>
-                    document.getElementById('downloadResume').addEventListener('click', function() {
-                        //Specifying document URL
-                        var documentURL = 'assets/resume.pdf';
-                        var fileName = 'ivan-siisi-tawiah-resume.pdf';
-                        //Creating an invisible element that would trigger the download
-                        var a = document.createElement('a');
-                        a.href = documentURL;
-                        a.download = fileName;
-                        //Trigger a click event
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    });
-                </script>
             </div>
         </div>
     </header>
@@ -108,22 +77,6 @@
                 <h5 class="mb-3">A Software Developer located In The Wonderlands of Africa Ghana</h5>
                 <p class="mt-20">An enthusiastic and a highly amiable person in the field of Science, Technology and Engineering with a technical background in Robotics and ethical problem solving. Am also aspiring to be part of a team where my skills and knowledgeable abilities would help me be a great contributor to the company’s effort </p>
                 <button id="downloadCV" class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
-                <script>
-                    document.getElementById('downloadCV').addEventListener('click', function() {
-                        //Specifying document URL
-                        var documentURL = 'assets/CV.pdf';
-                        var fileName = 'ivan-siisi-tawiah-CV.pdf';
-                        //Creating an invisible element that would trigger the download
-                        var a = document.createElement('a');
-                        a.href = documentURL;
-                        a.download = fileName;
-                        //Trigger a click event
-                        a.style.display = 'none';
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                    });
-                </script>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
@@ -141,21 +94,6 @@
                     <li class="social-item"><a class="social-link" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
                     <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
                     <li class="social-item"><a id="copyButton1" class="social-link" href="#" target="_blank"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
-                    <script>
-                  
-                        function copyURLToClipboard() {
-                          var currentURL = window.location.href;
-                      
-                          var tempTextArea = document.createElement('textarea');
-                          tempTextArea.value = currentURL;
-                          document.body.appendChild(tempTextArea);
-                          tempTextArea.select();
-                          document.execCommand('copy');
-                          document.body.removeChild(tempTextArea);
-                          alert('URL copied to clipboard: ' + currentURL);
-                        }
-                        document.getElementById('copyButton1').addEventListener('click', copyURLToClipboard);
-                      </script>
                 </ul>  
             </div>
             <div class="col-lg-4 about-card">
@@ -447,18 +385,6 @@
                             <li class="list-item">No <span class="text-muted"><s>In-person Class Sessions</s></span></li><br>
                         </ul>
                         <button id="freePackage" class="btn btn-primary btn-rounded w-lg">Enquire</button>
-                            <script>
-                                document.getElementById('freePackage').addEventListener('click', function() {
-                                    var email = "tawiahivansiisi@gmail.com";
-                                    var subject = "Free Tutorial Package Enquiry";
-                                    var body = "I'd Like to enquire about the free package please ";
-                            
-                                    var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                                });
-                            </script>
-                            
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -477,17 +403,6 @@
                             <li class="list-item"><span class="text-muted">Project Build</span></li><br>
                         </ul>
                         <button id="basicPackage" class="btn btn-primary btn-rounded w-lg">Enquire</button>
-                        <script>
-                            document.getElementById('basicPackage').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Basic Tutorial Package Equiry";
-                                var body = "I'd Like to enquire about the Basic package please ";
-                            
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -507,17 +422,6 @@
                             <li class="list-item"><span class="text-muted">Career Advisory and Mentorship</span></li>
                         </ul>
                         <button id="exclusivePackage" class="btn btn-primary btn-rounded w-lg">Enquire</button>
-                        <script>
-                            document.getElementById('exclusivePackage').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Exclusive Tutorial Package Equiry";
-                                var body = "I'd Like to enquire about the Exclusive package please ";
-                            
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -536,17 +440,6 @@
                             <li class="list-item"><span class="text-muted">Project Build</span></li>
                         </ul>
                         <button id="proPackage" class="btn btn-primary btn-rounded w-lg">Enquire</button>
-                        <script>
-                            document.getElementById('proPackage').addEventListener('click', function() {
-                                var email = "tawiahivansiisi@gmail.com";
-                                var subject = "Pro Tutorial Package Equiry";
-                                var body = "I'd Like to enquire about the Pro package please ";
-                            
-                                var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-                            
-                                window.location.href = mailtoLink;
-                            });
-                            </script>
                     </div>
                 </div>
             </div>
@@ -557,75 +450,11 @@
         <p>Thank you for your purchase. Your package will be sent to your email shortly. Please be patient.</p>
         <button class="testbtn" id="homeButton">Back to Home</button>
     </section>
-    <script>
-         document.addEventListener("DOMContentLoaded", function() {
-    // Get the hash from the URL
-    var hash = window.location.hash.substr(1);
 
-    // If the hash is "congrats", remove the hidden class from the "congrats" section
-    if (hash === "congrats") {
-      var congratsSection = document.getElementById("congrats");
-      if (congratsSection) {
-        congratsSection.classList.remove("hidden");
-      }
-    }
-  });
-
-        document.getElementById('homeButton').addEventListener('click', function() {
-    window.location.href = 'index.html'; // Replace 'index.html' with your home page URL
-  });
-    </script>
-
-<style>
-.hidden {
-  display: none;
-}
-
- #congrats {
-font-family: Arial, sans-serif;
-background-color: #fff;
-padding: 0;
-justify-content: center;
-align-items: center;
-text-align: center;
-height: 100vh;
-}
-
-
-.testhead {
-color: #be7d1c;
-}
-
-.testbtn {
-background-color: #be7d1c;
-color: white;
-border: none;
-padding: 10px 20px;
-cursor: pointer;
-transition: background-color 0.3s ease;
-}
-
-.testbtn:hover {
-background-color: #fcc676;
-}
-</style>
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
             <button id="openURLHIRE" class="btn bg-primary w-lg" >Hire me</button>
-            <script>
-                // Function to open the URL in a new tab
-                function openURL() {
-                  
-                  var urlToOpen = 'https://www.freelancer.com/u/tawiahivansiisi';
-              
-                  // Open the URL in a new tab
-                  window.open(urlToOpen, '_blank');
-                }
-              
-                // Attach the function to the button click event
-                document.getElementById('openURLHIRE').addEventListener('click', openURL);
-              </script>
         </div>
     </section>
 
@@ -897,97 +726,18 @@ background-color: #fcc676;
                     <option value="supportProjectMartha">AI-Powered Personal Finance Assistant (Martha)</option>
                 </select>
     
-                <input class="inputol" type="number" id="cvv" name="cvv" placeholder="Choose Amount  (Mininum of GHS 5)" min="0.5" step="1" required>
+                <input class="inputol" type="number" id="cvv" name="cvv" placeholder="Choose Amount  (Mininum of GHS 2)" min="2" step="1" required>
     
                 <button class="buttonol" id="planButton" type="submit" onclick="payWithPaystack()">Donate</button>
 
                 <p class="copyright">15% of your donation would be used to empower underprivileged African communities with tech.</p>
             </form>
-            <script>       
-                document.addEventListener('DOMContentLoaded', (event) => {
-                        const selectElement = document.getElementById('paymentPlanSelect');
-                        const planButton = document.getElementById('planButton');
-                        const titleSelector = document.getElementById('titleol');
-            
-                        const planDetails = {
-                            'supportProjectAeroSimApp': 'Aerospace Simulation App',
-                            'supportProjectAREngineer': 'Interactive Augmented Reality for Engineering Design',
-                            'supportProjectMartha': 'AI-Powered Personal Finance Assistant (Martha)'
-                        };
-            
-                        selectElement.addEventListener('change', function() {
-                            const selectedValue = this.value;
-                            if (selectedValue && planDetails[selectedValue]) {
-                                titleSelector.textContent = '#' + selectedValue;
-                            } else {
-                                titleSelector.textContent = '#supportSiisi';
-                            }
-                        });
-            
-                        planButton.addEventListener('click', function() {
-                            const selectedValue = selectElement.value;
-                            if (selectedValue == '0') {
-                                alert('Please select a Donation project');
-                            } else if (selectedValue && planDetails[selectedValue]) {
-                                console.log('You have selected the ' + planDetails[selectedValue] + '.');
-                            }
-                        });
-            
-                    });
-                </script>
-            <script>
-                // Get references to the input field and the button
-                const inputField = document.getElementById('cvv');
-                const dynamicButton = document.getElementById('planButton');
-            
-                // Add an event listener to the input field to listen for input events
-                inputField.addEventListener('input', function() {
-                    // Change the button text to the value of the input field
-                    dynamicButton.textContent = 'Donate GHS ' + inputField.value + ' now';
-                });
-            </script>
-            
             <script src="https://js.paystack.co/v1/inline.js"></script>
-            <script>
-                const paymentForm = document.getElementById('paymentForm');
-                const selectElement = document.getElementById('paymentPlanSelect');
-                
-    
-    paymentForm.addEventListener("submit", payWithPaystack, false);
-    
-    function payWithPaystack(e) {
-      e.preventDefault();
-
-      
-      let inputFieldog = document.getElementById('card-name').value;
-      let processedValue = inputFieldog.replace(/\s+/g, '');
-    
-      let handler = PaystackPop.setup({
-        key: 'pk_live_78f4689f62138e0e4ca10676ad3e05a7df40617f', // Replace with your public key
-        email: document.getElementById("email-address").value,
-        amount: document.getElementById("cvv").value * 100,
-        ref: processedValue + ''+Math.floor((Math.random() * 1000) + 1) + document.getElementById('paymentPlanSelect').value,
-        currency: 'GHS', // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-        // label: "Optional string that replaces customer email"
-        onClose: function(){
-          alert('Window closed.');
-        },
-        callback: function(response){
-          let message3 = 'Payment complete! Reference: ' + response.reference;
-          alert(message);
-        }
-      });
-    
-      handler.openIframe();
-    }
-            </script>
-        
         </div>
-    
     </div>
 
 <style>
-    /* The Modal (background) */
+/* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
@@ -1073,7 +823,7 @@ background-color: #fcc676;
 .textol {
     text-align: center;
     color: #333;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -1135,100 +885,6 @@ background-color: #fcc676;
 
 
 </style>
-
-<script>
-    // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtnol");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("closeol")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "flex";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
-</script>
-
-<script>
-    // Get the modal
-var modal2 = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn2 = document.getElementById("myBtnol2");
-
-// Get the <span> element that closes the modal
-var span2 = document.getElementsByClassName("closeol")[0];
-
-// When the user clicks on the button, open the modal
-btn2.onclick = function () {
-    modal2.style.display = "flex";
-};
-
-// When the user clicks on <span> (x), close the modal
-span2.onclick = function () {
-    modal2.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-};
-
-</script>
-
-<script>
-    // Get the modal
-var modal3 = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn3 = document.getElementById("myBtnol3");
-
-// Get the <span> element that closes the modal
-var span3 = document.getElementsByClassName("closeol")[0];
-
-// When the user clicks on the button, open the modal
-btn3.onclick = function () {
-    modal3.style.display = "flex";
-};
-
-// When the user clicks on <span> (x), close the modal
-span3.onclick = function () {
-    modal3.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal3) {
-        modal3.style.display = "none";
-    }
-};
-
-</script>
-
-
-
-
-                       <script>
-                            
-                       </script>
                     </div>
                 </div><!-- end of blog wrapper -->
 
@@ -1255,28 +911,6 @@ window.onclick = function (event) {
                             </div>
                             <div class="form-group ">
                                 <button id="sendMessage" type="submit" class="form-control btn btn-primary" onclick="composeEmail()" >Send Message</button>
-                                <script>
-                                  
-                                    function composeEmail() {
-                                  
-                                      var subject = document.getElementById('subject').value;
-                                      var name = document.getElementById('name').value;
-                                      var message = document.getElementById('message').value;
-                                  
-                                     
-                                      var emailBody = "Subject: " + subject + "\n\n";
-                                      emailBody += "Name: " + name + "\n\n";
-                                      emailBody += "Message:\n" + message;
-                                  
-                                     
-                                      var mailtoLink = "mailto:tawiahivansiisi@gmail.com" +
-                                                       "?subject= " + encodeURIComponent(subject) +
-                                                       "&body=" + encodeURIComponent(emailBody);
-                                  
-                                      
-                                      window.location.href = mailtoLink;
-                                    }
-                                  </script>
                             </div>
                         </form>
                     </div>
@@ -1308,27 +942,11 @@ window.onclick = function (event) {
                                 <h6 class="d-inline">Email :<br> <span class="text-muted">tawiahivansiisi@gmail.com</span></h6>
                             </div>
                         </div>
-                        <ul class="social-icons pt-4">
-                           
+                        <ul class="social-icons pt-4">                        
                             <li class="social-item"><a class="social-link text-dark" href="https://www.x.com/@siisi_tv" target="_blank"><i class="ti-twitter" aria-hidden="true"></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" href="https://www.instagram.com/siisi_tv" target="_blank"><i class="ti-instagram" aria-hidden="true"></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" href="https://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" id="copyButton2" target="_blank"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
-                            <script>
-                  
-                                function copyURLToClipboard() {
-                                  var currentURL = window.location.href;
-                              
-                                  var tempTextArea = document.createElement('textarea');
-                                  tempTextArea.value = currentURL;
-                                  document.body.appendChild(tempTextArea);
-                                  tempTextArea.select();
-                                  document.execCommand('copy');
-                                  document.body.removeChild(tempTextArea);
-                                  alert('URL copied to clipboard: ' + currentURL);
-                                }
-                                document.getElementById('copyButton2').addEventListener('click', copyURLToClipboard);
-                              </script>
                         </ul> 
                     </div>
                 </div>
@@ -1339,7 +957,7 @@ window.onclick = function (event) {
     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Ivan</span></a> A big shoutout to my mentor and friend <a href="https://www.linkedin.com/in/ayimraymond" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Papa Ray</span></a> 🥂
+                &copy;2023 - <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://www.linkedin.com/in/ivan-siisi-tawiah" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Me (Siisi)</span></a> A big shoutout to my mentor and friend <a href="https://www.linkedin.com/in/ayimraymond" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Papa Ray</span></a> 🥂
             </p>
         </div>
     </footer>
