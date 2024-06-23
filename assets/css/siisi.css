@@ -171,6 +171,26 @@ dl {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/*Upvote style*/
+#upvote, #upvote2, #upvote3, #upvote4, #upvote5, #upvote6, #upvote7, #upvote8, #upvote9, #downvote, #downvote2, #downvote3, #downvote4, #downvote5, #downvote6, #downvote7, #downvote8, #downvote9 {
+  float: right;
+  margin-right: 8px;
+  font-size: 15px;
+  
+}
+#upvote:hover, #upvote:focus, #upvote2:hover, #upvote2:focus, #upvote3:hover, #upvote3:focus, #upvote4:hover, #upvote4:focus, #upvote5:hover, #upvote5:focus, #upvote6:hover, #upvote6:focus, #upvote7:hover, #upvote7:focus, #upvote8:hover, #upvote8:focus, #upvote9:hover, #upvote9:focus, #downvote:hover, #downvote:focus, #downvote2:hover, #downvote2:focus, #downvote3:hover, #downvote3:focus, #downvote4:hover, #downvote4:focus, #downvote5:hover, #downvote5:focus, #downvote6:hover, #downvote6:focus, #downvote7:hover, #downvote7:focus, #downvote8:hover, #downvote8:focus, #downvote9:hover, #downvote9:focus {
+  cursor: pointer;
+  color:#ccc;
+}
+
+
+
+
+
+
+
 /* The Close Button */
 .closeol, .closeol2, .closeol4 {
   color: #aaa;
