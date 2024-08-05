@@ -960,7 +960,7 @@
                                 <i class="ti-envelope icon-md"></i>
                             </div>
                             <div class="col-10">
-                                <h6 class="d-inline">Email :<br> <span class="text-muted">tawiahivansiisi@gmail.com</span></h6>
+                                <h6 class="d-inline">Send an email:<br> <span class="text-muted">tawiahivansiisi@gmail.com</span></h6>
                             </div>
                         </div>
                         <ul class="social-icons pt-4">                        
@@ -998,6 +998,30 @@
 
     <!-- Siisi js -->
     <script src="assets/js/siisi.js"></script>
+    <!-- Google Firebase Analytics -->
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDgYPXLTc1h1VsIeVsvR0ulnEDvj_R3AmY",
+    authDomain: "portfolio-webs-b7ab9.firebaseapp.com",
+    projectId: "portfolio-webs-b7ab9",
+    storageBucket: "portfolio-webs-b7ab9.appspot.com",
+    messagingSenderId: "141131419988",
+    appId: "1:141131419988:web:f80f4aba5204643d0278c1",
+    measurementId: "G-7KCC4JM5SV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 
 </body>
 </html>
