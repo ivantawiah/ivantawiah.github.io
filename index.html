@@ -11,7 +11,42 @@
     <!-- Bootstrap + main styles -->
 	<link rel="stylesheet" href="assets/css/siisi.css">
     <!--Favicon-->
-	<link href="assets/imgs/fav.png" type="image/png" rel="icon">
+	<link href="assets/imgs/avatar.JPG" type="image/png" rel="icon">
+    <style>
+     #company-logos {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between; /* Distribute logos evenly across the width */
+            align-items: center; /* Centers the logos vertically if needed */
+            flex-wrap: wrap; /* Allows the logos to wrap to the next line if necessary */
+            padding: 20px;
+            gap: 10px; /* Adds spacing between rows */
+        }
+
+        .logo-container {
+            flex: 1 1 auto; /* Allows logos to grow and shrink as needed */
+            display: flex;
+            justify-content: center; /* Centers logos within their container */
+        }
+
+        .logo-container img {
+            height: 55px; /* Sets the height of the logos */
+            width: auto; /* Width adjusts automatically to maintain aspect ratio */
+            transition: transform 0.3s ease; /* Smooth animation on hover */
+            max-width: 100%; /* Prevents logos from overflowing their container */
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.1); /* Slightly enlarges the logo on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo-container img {
+                height: 37px; /* Smaller height for mobile, width will adjust automatically */
+            }
+        }
+</style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <a href="https://www.buymeacoffee.com/ivantawiah" target="_blank" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>
@@ -24,10 +59,20 @@
                 <li class="social-item"><a class="social-link text-light" id="copyButton"><i class="ti-sharethis" aria-hidden="true"></i></a></li>
             </ul>  
             <div class="header-content">
-                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h4 class="header-mono" style="margin-left: 10px;">My name is</h4>
                 <h1 class="header-title">Ivan Siisi Tawiah</h1>
-                <h6 class="header-mono" >Software Developer | Graphic Designer</h6>
-                <button id="downloadResume" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Download Resume</button>
+                <h6 class="header-subtitle">I am a <span class="auto-type" style="color: #d46333;"></span></h6>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings : ["Mentor","Software Developer","Mobile Applications Developer", "Web Developer", "Mobile App UI Designer","Graphic Designer","Career Coach","Professional Gamer"],
+                typeSpeed : 80,
+                backSpeed : 60,
+                loop : true
+            })
+        </script>
+                <button id="downloadResume" class="btn btn-primary btn-rounded" style="margin-top: 10px;"><i class="ti-printer pr-2"></i>Download Resume</button>
             </div>
         </div>
     </header>
@@ -131,6 +176,25 @@
     <section class="section" id="resume">
         <div class="container">
             <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <section id="company-logos">            
+                <div class="logo-container">
+                    <img src="company (4).png" alt="Company 3">
+                </div>               
+                <div class="logo-container">
+                    <img src="company (5).jpg" alt="Company 3">
+                </div>
+                <div class="logo-container">
+                    <img src="company (2).png" alt="Company 3">
+                </div>
+                <div class="logo-container">
+                    <img src="company (1).png" alt="Company 1">
+                </div>
+                <div class="logo-container">
+                    <img src="company (3).png" alt="Company 3">
+                </div>
+                <!-- Add more logos as needed -->
+            </section>
+
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <div class="card">
@@ -196,39 +260,39 @@
                             </div>
                         </div>
                         <div class="card-body pb-2">
-                           <h6>Executive Influence <i onclick="toggleColor2('#be7d1c'); disableAndHide2();" title="Give a Downvote" id="downvote" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColor('#be7d1c'); disableAndHide();" title="Give an Upvote" id="upvote" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                           <h6>Executive Influence <i onclick="toggleColor2('#ad6444'); disableAndHide2();" title="Give a Downvote" id="downvote" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColor('#ad6444'); disableAndHide();" title="Give an Upvote" id="upvote" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar" class="progress-bar bg-danger" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                             </div> 
-                            <h6>Leadership <i onclick="toggleColord2('#be7d1c'); disableAndHided2();" title="Give a Downvote" id="downvote2" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru2('#be7d1c'); disableAndHideu2();" title="Give an Upvote" id="upvote2" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Leadership <i onclick="toggleColord2('#ad6444'); disableAndHided2();" title="Give a Downvote" id="downvote2" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru2('#ad6444'); disableAndHideu2();" title="Give an Upvote" id="upvote2" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar2" class="progress-bar bg-danger" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Ethical Problem Solving <i onclick="toggleColord3('#be7d1c'); disableAndHided3();" title="Give a Downvote" id="downvote3" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru3('#be7d1c'); disableAndHideu3();" title="Give an Upvote" id="upvote3" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Ethical Problem Solving <i onclick="toggleColord3('#ad6444'); disableAndHided3();" title="Give a Downvote" id="downvote3" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru3('#ad6444'); disableAndHideu3();" title="Give an Upvote" id="upvote3" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar3" class="progress-bar bg-danger" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Generative AI <i onclick="toggleColord4('#be7d1c'); disableAndHided4();" title="Give a Downvote" id="downvote4" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru4('#be7d1c'); disableAndHideu4();" title="Give an Upvote" id="upvote4" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Generative AI <i onclick="toggleColord4('#ad6444'); disableAndHided4();" title="Give a Downvote" id="downvote4" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru4('#ad6444'); disableAndHideu4();" title="Give an Upvote" id="upvote4" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar4" class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                           <h6>Mobile App development <i onclick="toggleColord5('#be7d1c'); disableAndHided5();" title="Give a Downvote" id="downvote5" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru5('#be7d1c'); disableAndHideu5();" title="Give an Upvote" id="upvote5" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                           <h6>Mobile App development <i onclick="toggleColord5('#ad6444'); disableAndHided5();" title="Give a Downvote" id="downvote5" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru5('#ad6444'); disableAndHideu5();" title="Give an Upvote" id="upvote5" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar5" class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>website development <i onclick="toggleColord6('#be7d1c'); disableAndHided6();" title="Give a Downvote" id="downvote6" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru6('#be7d1c'); disableAndHideu6();" title="Give an Upvote" id="upvote6" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>website development <i onclick="toggleColord6('#ad6444'); disableAndHided6();" title="Give a Downvote" id="downvote6" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru6('#ad6444'); disableAndHideu6();" title="Give an Upvote" id="upvote6" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar6" class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Graphic Designing <i onclick="toggleColord7('#be7d1c'); disableAndHided7();" title="Give a Downvote" id="downvote7" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru7('#be7d1c'); disableAndHideu7();" title="Give an Upvote" id="upvote7" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Graphic Designing <i onclick="toggleColord7('#ad6444'); disableAndHided7();" title="Give a Downvote" id="downvote7" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru7('#ad6444'); disableAndHideu7();" title="Give an Upvote" id="upvote7" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar7" class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Data analytics <i onclick="toggleColord8('#be7d1c'); disableAndHided8();" title="Give a Downvote" id="downvote8" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru8('#be7d1c'); disableAndHideu8();" title="Give an Upvote" id="upvote8" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Data analytics <i onclick="toggleColord8('#ad6444'); disableAndHided8();" title="Give a Downvote" id="downvote8" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru8('#ad6444'); disableAndHideu8();" title="Give an Upvote" id="upvote8" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar8" class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6>Robotics <i onclick="toggleColord9('#be7d1c'); disableAndHided9();" title="Give a Downvote" id="downvote9" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru9('#be7d1c'); disableAndHideu9();" title="Give an Upvote" id="upvote9" class="ti-thumb-up" aria-hidden="true"></i></h6>
+                            <h6>Robotics <i onclick="toggleColord9('#ad6444'); disableAndHided9();" title="Give a Downvote" id="downvote9" class="ti-thumb-down" aria-hidden="true"></i><i onclick="toggleColoru9('#ad6444'); disableAndHideu9();" title="Give an Upvote" id="upvote9" class="ti-thumb-up" aria-hidden="true"></i></h6>
                             <div class="progress mb-3">
                                 <div id="progBar9" class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div> 
                             </div>
@@ -661,6 +725,106 @@
         </div>            
     </section>
     <!-- End of portfolio section -->
+     <style>
+             #project-archives {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 95%;
+            max-width: 1200px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .cardolos {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cardolos:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cardolos img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            object-fit: cover;
+            height: 150px; /* Ensures the image fits nicely within the card */
+        }
+
+        .cardolos h3 {
+            margin-top: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .cardolos p {
+            margin-left: 20px;
+            margin-right: 20px;
+            flex-grow: 1; /* Ensures the description takes up available space */
+        }
+
+        .cardolos a {
+            color: #ad6444;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .cardolos a:hover {
+            text-decoration: underline;
+            color: #cb7a56;
+        }
+
+    </style>
+    <section class="section">
+        <div class="container">
+            <h2 class="mb-5">Project <span class="text-danger">Archives</span></h2>
+
+        <div id="project-archives">
+
+            <!-- DearFresher Card -->
+            <div class="cardolos">
+                <img src="Screenshot 2024-08-15 082008.png" alt="DearFresher">
+                <h3>Hallway Mobile</h3>
+                <p>An eccomerce platform focused on promoting exlusives products of brands and busines</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="cardolos">
+                <img src="photo_2024-08-15_07-31-11.jpg" alt="DearFresher">
+                <h3>DearFresher</h3>
+                <p>DearFresher is a social networking platform designed for university students. It aims to help new students get a glimpse of campus life and connect with peers.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- HubX Browser Card -->
+            <div class="cardolos">
+                <img src="photos.jpeg" alt="HubX Browser">
+                <h3>HubX Browser</h3>
+                <p>HubX Browser is a multi-purpose mobile phone browsing app with a wide range of entertaining features. It enhances the browsing experience with various interactive tools and entertainment options.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Health Wellbeing App Card -->
+            <div class="cardolos">
+                <img src="Screenshot 2024-08-15 074257.png" alt="Health Wellbeing App">
+                <h3>Health Wellbeing App</h3>
+                <p>This is a UI design for a conceptual health and wellbeing app, fully powered by AI. It focuses on providing personalized health insights and recommendations through advanced AI technology.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        </div>
+    </section>
 
     <section class="section" id="blog">
         <div class="container">
@@ -804,7 +968,7 @@
 #myBtnol3 {
     font-size: 15px;
     font-weight: 600;
-    color: #be7d1c;
+    color: #ad6444;
 }
 
 #myBtnol3:hover,
@@ -817,7 +981,7 @@
 #myBtnol {
     font-size: 15px;
     font-weight: 600;
-    color: #be7d1c;
+    color: #ad6444;
 }
 
 #myBtnol:hover,
@@ -830,7 +994,7 @@
 #myBtnol2 {
     font-size: 15px;
     font-weight: 600;
-    color: #be7d1c;
+    color: #ad6444;
 }
 
 #myBtnol2:hover,
@@ -890,7 +1054,7 @@
 
 .buttonol:hover {
     background-color: #000000;
-    color: #be7d1c;
+    color: #ad6444;
     font-weight: 900;
     font-size: 16px;
 }
@@ -912,8 +1076,356 @@
             </div>
         </div>
     </section>
+    <style>
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
 
-    <div class="section contact" id="contact">
+        .testimonials-container {
+            display: flex;   
+            gap: 2rem;
+            animation: scroll 20s linear infinite; /* Smooth, continuous scrolling */
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 36px;
+            border: 2px dashed #ad6444;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 1rem;
+            text-align: center;
+            flex-shrink: 0; /* Prevents flex items from shrinking */
+        }
+
+        .testimonial-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #ad6444;
+            object-fit: cover;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            color: #000;
+            height: 130px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .testimonial-author a{
+            text-decoration: none;
+            color: #ad6444;
+        }
+
+        .testimonial-author a:hover {
+            cursor: pointer;
+            color: #000;
+        }
+
+        .testimonial-role {
+            color: #aaa;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #testimonials {
+            padding: 2rem;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden; /* Hide overflow */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <section class="section">
+        <div class="container">
+            <h2 class="mb-5">What Others Are Saying About <span class="text-danger">Me</span></h2>
+        </div>
+        <div id="testimonials">
+            <div class="carousel-container">
+                <div class="testimonials-container" id="testimonialsContainer">
+                    <!-- First set of testimonials -->
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>               
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="nelson.jpg" alt="Jonathan Nelson" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Jonathan Nelson</a></p>
+                        <p class="testimonial-role">Co founder / CEO, Paybox</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Prez. Association of Aerospace Engineering Students, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>
+    
+                    <!-- Duplicate set of testimonials for continuous scroll -->
+                    
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>               
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="nelson.jpg" alt="Jonathan Nelson" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Jonathan Nelson</a></p>
+                        <p class="testimonial-role">Co founder / CEO, Paybox</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Prez. Association of Aerospace Engineering Students, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>
+    
+                    <!-- Duplicate set of testimonials for continuous scroll -->
+                    
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>               
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="nelson.jpg" alt="Jonathan Nelson" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Jonathan Nelson</a></p>
+                        <p class="testimonial-role">Co founder / CEO, Paybox</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="lewis.png" alt="Lewis Ampem Darko" class="testimonial-photo">
+                        <p class="testimonial-text">"Collaborating with Ivan has been a great pleasure. He brings fresh ideas and a positive attitude to every project."</p>
+                        <p class="testimonial-author"><a href="#">Lewis Ampem Darko</a></p>
+                        <p class="testimonial-role">Prez. Association of Aerospace Engineering Students, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="grantreece.png" alt="Grant Arthur" class="testimonial-photo">
+                        <p class="testimonial-text">"Working with Siisi has been a fantastic experience. His creativity, dedication, and attention to detail are truly impressive."</p>
+                        <p class="testimonial-author"><a href="#">Grant Arthur</a></p>
+                        <p class="testimonial-role">UI / UX Designer</p>
+                    </div>
+    
+                    <!-- Duplicate set of testimonials for continuous scroll -->
+                    
+                    <div class="testimonial-card">
+                        <img src="Game Gbey.jpg" alt="Game Gbey" class="testimonial-photo">
+                        <p class="testimonial-text">"For just the short time I had an ecounter with Siisi, he's been all out on his ambition and he's impressively creative as well. Great Mind"</p>
+                        <p class="testimonial-author"><a href="#">Game Gbey</a></p>
+                        <p class="testimonial-role">Chief Creator / Chairman Game Gbey Hub</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="ppr pp.jpg" alt="Papa Ray" class="testimonial-photo">
+                        <p class="testimonial-text">"Words can't really capture the impact Siisi has. His Commitment to ensuring every project is one-of-a-kind is truly commendable"</p>
+                        <p class="testimonial-author"><a href="#">Ayim Raymond</a></p>
+                        <p class="testimonial-role">Forex Trader / Entrepreneur</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="gadsonic pp.jpg" alt="Godson" class="testimonial-photo">
+                        <p class="testimonial-text">"Having tackled projects with Ivan, I can confidently attest to his exceptional technical expertise, Problem solving skills and collaborative approach"</p>
+                        <p class="testimonial-author"><a href="#">Godson Antwi</a></p>
+                        <p class="testimonial-role">CEO, Build_it / VP Ghana Engineering Students Association, KNUST</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="calebshalley.png" alt="Caleb Shalley" class="testimonial-photo">
+                        <p class="testimonial-text">"Ivan's commitment to excellence and ability to deliver creative solutions make him an invaluable asset. He consistently exceeds expectations"</p>
+                        <p class="testimonial-author"><a href="#">Caleb Shalley</a></p>
+                        <p class="testimonial-role">Student Leader</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Adjust animation speed based on the total number of testimonials
+        const container = document.getElementById('testimonialsContainer');
+        const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 16; // Account for gap
+        const cardCount = document.querySelectorAll('.testimonial-card').length;
+
+        // Set dynamic animation duration based on content width
+        const animationDuration = (cardWidth * cardCount) / 2 / 50; // Adjust speed here
+        container.style.animationDuration = `${animationDuration}s`;
+    </script>
+
+    <div class="section contact" id="contact" style="margin-top: 100px;">
         <div id="map" class="map"></div>
         <div class="container">
             <div class="row">
