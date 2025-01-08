@@ -23,8 +23,8 @@
             <label for="expiry-date">Package:</label>
             <select id="paymentPlanSelect" required>
                 <option selected value="0">--Select a Plan--</option>
-                <option value="40">Starter GHS39.99</option>
-                <option value="80">Basic GHS79.99</option>
+                <option value="60">Starter GHS59.99</option>
+                <option value="100">Basic GHS99.99</option>
                 <option value="250">Pro GHS249.99</option>
             </select>
 
@@ -75,8 +75,8 @@ function payWithPaystack(e) {
             const planButton = document.getElementById('planButton');
 
             const planDetails = {
-                '40': 'Starter GHS39.99',
-                '80': 'Basic GHS79.99',
+                '60': 'Starter GHS59.99',
+                '100': 'Basic GHS99.99',
                 '250': 'Pro GHS249.99'
             };
 
@@ -179,7 +179,7 @@ select {
 }
 
 button[type="submit"] {
-    background-color: #604006;
+    background-color: #000000;
     color: #fff;
     padding: 10px 20px;
     width: 100%;
