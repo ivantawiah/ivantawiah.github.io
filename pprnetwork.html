@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <title>The PPR Network | Payment Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,9 +23,9 @@
             <label for="expiry-date">Package:</label>
             <select id="paymentPlanSelect" required>
                 <option selected value="0">--Select a Plan--</option>
-                <option value="60">Starter GHS59.99</option>
-                <option value="100">Basic GHS99.99</option>
-                <option value="250">Pro GHS249.99</option>
+                <option value="50">Starter GHS49.99</option>
+                <option value="120">Basic GHS199.99</option>
+                <option value="300">Pro GHS299.99</option>
             </select>
 
             <label for="cvv">Comment</label>
@@ -75,9 +75,9 @@ function payWithPaystack(e) {
             const planButton = document.getElementById('planButton');
 
             const planDetails = {
-                '60': 'Starter GHS59.99',
-                '100': 'Basic GHS99.99',
-                '250': 'Pro GHS249.99'
+                '50': 'Starter GHS49.99',
+                '120': 'Basic GHS199.99',
+                '300': 'Pro GHS299.99'
             };
 
             selectElement.addEventListener('change', function() {
